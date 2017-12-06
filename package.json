@@ -1,0 +1,16 @@
+{
+  "name": "sammy",
+  "version": "1.0.0",
+  "description": "Sammy test for containers demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Nan Zhong (nzhong@digitalocean.com)",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}

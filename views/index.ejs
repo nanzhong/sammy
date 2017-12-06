@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why, who do we have here?</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1">Why, who do we have here?</h1>
+          <h2 class="subtitle is-3">Hi KubeCon and CloundNativeCon! Sammy sends some love! ❤</h1>
+          <div class="columns">
+            <div class="column is-two-thirds">
+              <img class="sammy" src="/img/<%= sammyImg %>.png">
+            </div>
+            <div class="column">
+              <h2 class="title is-4">Environment Variables</h2>
+              <div class="env-table">
+                <table class="table is-hoverable">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% Object.keys(env).forEach(function(name) { %>
+                      <tr>
+                        <td><%- name %></td>
+                        <td><%- env[name] %></td>
+                      </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+              <% if(mount) { %>
+                <h2 class="title is-4">Volume Mounted at /mnt</h2>
+                <div class="mnt">
+                  <ul>
+                    <% mount.forEach(function(file) { %>
+                      <li><%- file %></li>
+                    <% }) %>
+                  </ul>
+                </div>
+              <% } else { %>
+                <h2 class="title is-4">No Volume Mounted at /mnt</h2>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

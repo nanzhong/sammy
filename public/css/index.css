@@ -1,0 +1,19 @@
+.sammy {
+  width: 100%;
+}
+
+.column {
+  overflow-x: scroll;
+}
+
+.env-table {
+  font-size: 80%;
+  height: 300px;
+  overflow: scroll;
+  margin-bottom: 30px;
+}
+
+.mnt {
+  overflow: scroll;
+  height: 300px;
+}
